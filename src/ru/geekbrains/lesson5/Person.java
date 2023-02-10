@@ -1,5 +1,14 @@
 package ru.geekbrains.lesson5;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@ToString
 public class Person {
   private String name;
   private String position;
@@ -7,19 +16,6 @@ public class Person {
   private String phone;
   private int salary;
   private int age;
-
-  public int getAge() {
-    return age;
-  }
-
-  public Person(String name, String position, String email, String phone, int salary, int age) {
-    this.name = name;
-    this.position = position;
-    this.email = email;
-    this.phone = phone;
-    this.salary = salary;
-    this.age = age;
-  }
 
   public void printInfo() {
     System.out.printf("""

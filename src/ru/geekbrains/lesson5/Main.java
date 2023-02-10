@@ -2,7 +2,7 @@ package ru.geekbrains.lesson5;
 
 public class Main {
   public static void main(String[] args) {
-    Person[] persArray = new Person[5]; // Вначале объявляем массив объектов
+    var persArray = new Person[5]; // Вначале объявляем массив объектов
     persArray[0] = new Person("Ivanov Ivan", "Engineer", "ivivan@mailbox.com", "892312312", 30000, 30);
     persArray[1] = new Person("Semyonov Semyon", "Sysadmin", "semyon@mailbox.com", "89611234", 30000, 28);
     persArray[2] = new Person("Dmitriev Dima", "Director", "diman@mailbox.com", "891236326", 100000, 41);
@@ -10,7 +10,7 @@ public class Main {
     persArray[4] = new Person("San Sanych", "CTO", "sanych@mailbox.com", "8912623666", 80000, 46);
     for (Person person : persArray) {
       if (person.getAge() >= 40) {
-        person.printInfo();
+        System.out.println(person.toString());;
       }
     }
   }
